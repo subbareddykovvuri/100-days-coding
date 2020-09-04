@@ -1,0 +1,40 @@
+// C program to find the sum of 
+// N elements with goto statement 
+
+#include <stdio.h> 
+
+// Function to perform desired operation 
+int operate(int array[], int N) 
+{ 
+	int sum = 0, index = 0; 
+
+label: 
+	sum += array[index++]; 
+
+	if (index < N) { 
+
+		// backward jump of goto statement 
+		goto label; 
+	} 
+
+	// return the sum 
+	return sum; 
+} 
+
+// Driver Code 
+int main() 
+{ 
+
+	// Get N 
+	int N = 5, sum = 0; 
+
+	// Input values of an array 
+	int array[] = { 1, 2, 3, 4, 5 }; 
+
+	// Find the sum 
+	sum = operate(array, N); 
+
+	// Print the sum 
+	printf("%d", sum); 
+} 
+
