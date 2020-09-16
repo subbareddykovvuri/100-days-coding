@@ -1,12 +1,7 @@
 #include<stdio.h>
 int is_sparse1(int n){
-	while(n>0){
-		if((n&1==1)&& (n>>1&1)==1){
-			return 0;
-		}
-		n=n>>1;
-	}	
-	return 1;
+	return ((n&n/2)==0);
+	//retrun((
 }
 int main(){
 	int n;
