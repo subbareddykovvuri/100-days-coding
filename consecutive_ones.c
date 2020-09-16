@@ -1,12 +1,12 @@
 #include<stdio.h>
 int lon_con_ones(int n){
-	int max=0;
+	int c=0;
 	while(n>0){
-		if(n&1==1){
-			max=max+1;
-		}
+		n=n&(n>>1);
+		c++;
 		
 	}
+	return c;
 }
 int main(){
 	int n,l;
